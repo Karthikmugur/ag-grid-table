@@ -1,0 +1,64 @@
+<div class="main">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Form Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">User Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Form-->
+                    <form [formGroup]="userForm" (ngSubmit)="onSubmission()">
+                        <div class="mb-3">
+                            <label for="exampleInputFirst1" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="exampleInputFirst1" aria-describedby="firstHelp"
+                                name="firstname" formControlName="firstname">
+                            <div *ngIf="userForm.get('firstname')?.invalid && userForm.get('firstname')?.touched"
+                                id="firstHelp" class="form-text text-danger">First Name is required, Please enter.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputMiddle1" class="form-label">Middle Name</label>
+                            <input type="text" class="form-control" id="exampleInputMiddle1"
+                                aria-describedby="MiddleHelp" name="middlename" formControlName="middlename">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputLast1" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="exampleInputLast1" aria-describedby="LastHelp"
+                                name="lastname" formControlName="lastname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputMobile1" class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control" id="exampleInputMobile1" name="mobile"
+                                formControlName="mobile">
+                            <div *ngIf="userForm.get('mobile')?.invalid && userForm.get('mobile')?.touched"
+                                id="mobileHelp" class="form-text text-danger">Mobile no. is required, Please enter valid
+                                Mob. no.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="email" formControlName="email">
+                            <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" id="emailHelp"
+                                class="form-text text-danger">Email is required, Please enter valid email.</div>
+                        </div>
+                        <!-- <div class="buttonAlign">
+                            <button type="submit" [disabled]="userForm.invalid" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        </div> -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" [disabled]="userForm.invalid"  data-bs-dismiss="modal" class="btn btn-primary">Understood</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

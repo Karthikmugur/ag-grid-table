@@ -1,0 +1,30 @@
+[
+    {
+        "empId": 1,
+        "empName": "ABC",
+        "empPhone": 8945789567,
+        "empSalary": 30000
+        
+    },
+    {
+        "empId": 2,
+        "empName": "DEF",
+        "empPhone": 7845784767,
+        "empSalary": 32000
+        
+    },
+    {
+        "empId": 3,
+        "empName": "GHI",
+        "empPhone": 6745789508,
+        "empSalary": 28000
+        
+    },
+    {
+        "empId": 4,
+        "empName": "JKL",
+        "empPhone": 8945001487,
+        "empSalary": 38000
+        
+    }
+]

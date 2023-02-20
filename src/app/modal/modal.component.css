@@ -1,0 +1,9 @@
+.main{
+    padding: 20px;
+}
+.buttonAlign{
+    text-align: right;
+}
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
